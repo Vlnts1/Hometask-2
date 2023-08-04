@@ -1,12 +1,15 @@
 import React from 'react'
 import {Thead, BtnsContainer, Button, Col, Table, TBody } from './NoteListTable.styled'
+import { useSelector } from 'react-redux';
+import { getNotesSelector } from '../redux/notes/selectors';
+
+
 
 const NoteListTable: React.FC = () => {
 
-  const notes = [
-    { id: 1, img: "image.png", name: "Note 1", content: "Content 1", category: "Content category", created: "2023-08-01", date: "2023-08-01", archived: false },
-    { id: 2, img: "image.png", name: "Note 2", content: "Content 2", category: "Content category", created: "2023-08-02", date: "2023-08-02", archived: false }
-  ] 
+  const notes = useSelector(getNotesSelector);
+  console.log("Notes from useSelector:", notes);
+
 
   return (
     <Table>
