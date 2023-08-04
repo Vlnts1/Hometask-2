@@ -24,7 +24,7 @@ export const TBody = styled.div`
       border-radius: 10px;
 `;
 
-export const Col = styled.td`
+export const Col = styled.div`
   flex: 1;
   padding-top: 10px;
   text-align: center;

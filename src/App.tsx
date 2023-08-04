@@ -1,7 +1,7 @@
 import React from 'react'
 import NotesPage from './pages/NotesPage'
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <>
       <NotesPage />
@@ -9,4 +9,4 @@ const App: React.FC = () => {
   )
 }
 
-export default App
+

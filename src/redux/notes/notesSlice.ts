@@ -1,5 +1,6 @@
 import {  PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { initialNotes } from "./notes";
+import { Note } from "./types";
 
 
   const notesSlice = createSlice({
@@ -24,11 +25,13 @@ import { initialNotes } from "./notes";
           state.splice(index, 1);
         }
       },
-
+      addNote: (state, action: PayloadAction<Note>) => {
+        state.push(action.payload);
+      },
     }
   });
   
-export const { archiveNote, unarchiveNote, removeNote } = notesSlice.actions;
+export const { addNote, archiveNote, unarchiveNote, removeNote } = notesSlice.actions;
 
 export const notesReducer = notesSlice .reducer;
 
