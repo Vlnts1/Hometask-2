@@ -1,7 +1,15 @@
 import React from 'react'
 import { Col, TBody, Table, Thead } from './NoteSummaryTable.styled'
+import { useSelector } from 'react-redux';
+import { getNotesSelector } from '../redux/notes/selectors';
 
 const NoteSummaryTable: React.FC = () => {
+
+  const notes = useSelector(getNotesSelector);
+
+  const activeNotesCount = notes.filter((note) => !note.archived).length;
+  const archivedNotesCount = notes.filter((note) => note.archived).length;
+
   return (
     <Table>
       <Thead>
@@ -13,8 +21,8 @@ const NoteSummaryTable: React.FC = () => {
       <TBody>
             <Col>icon</Col>
             <Col>Task</Col>
-            <Col>13</Col>
-            <Col>12</Col>
+            <Col>{activeNotesCount}</Col>
+            <Col>{archivedNotesCount}</Col>
       </TBody>
     </Table>
   )

@@ -11,6 +11,8 @@ export type Note =  {
   
   export type NotesState = {
     notes: Note[];
+    activeNotesCount: number;
+    archivedNotesCount: number;
   }
 
   
