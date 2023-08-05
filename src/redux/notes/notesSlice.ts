@@ -1,5 +1,5 @@
 import {  PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { initialNotes } from "./notes";
+import { initialNotes } from "../../utils/notes";
 import { Note } from "./types";
 
 
@@ -28,10 +28,17 @@ import { Note } from "./types";
       addNote: (state, action: PayloadAction<Note>) => {
         state.push(action.payload);
       },
+      editNote: (state, action: PayloadAction<Note>) => {
+        const editedNote = action.payload;
+        const index = state.findIndex(note => note.id === editedNote.id);
+        if (index !== -1) {
+          state[index] = editedNote;
+        }
+      }
     }
   });
   
-export const { addNote, archiveNote, unarchiveNote, removeNote } = notesSlice.actions;
+export const { addNote, editNote, archiveNote, unarchiveNote, removeNote } = notesSlice.actions;
 
 export const notesReducer = notesSlice .reducer;
 

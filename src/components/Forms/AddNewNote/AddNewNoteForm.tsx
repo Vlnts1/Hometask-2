@@ -13,8 +13,9 @@ import {
 } from './AddNewNoteForm.styled';
 import { Note } from '../../../redux/notes/types';
 import { addNote } from '../../../redux/notes/notesSlice';
+import { categories } from '../../../utils/categories';
 
-const categories = ['Task', 'Random Thought', 'Idea'];
+
 
 const AddNoteButtonForm: React.FC = () => {
   const dispatch = useDispatch();
@@ -96,7 +97,7 @@ const AddNoteButtonForm: React.FC = () => {
         />
         <Input
           type="text"
-          name="dates"
+          name="name"
           placeholder="Dates"
           value={note.date}
           onChange={handleInputChange}

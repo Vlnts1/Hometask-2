@@ -45,3 +45,9 @@ export const Button = styled.button`
       border-radius: 5px;
       cursor: pointer;
 `;
+
+export const Icon = styled.img`
+  width: 50px;
+  height: 50px;
+
+`;
