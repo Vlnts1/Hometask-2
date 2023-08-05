@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 type FormProps = {
-    show: boolean;
-  }
+  show: boolean
+}
 
 export const Container = styled.div`
   display: flex;
@@ -10,10 +10,10 @@ export const Container = styled.div`
   align-items: center;
   margin-top: 20px;
   padding: 20px;
-`;
+`
 
 export const Overlay = styled.div<FormProps>`
-  display: ${props => (props.show ? 'block' : 'none')};
+  display: ${(props) => (props.show ? 'block' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
@@ -21,7 +21,7 @@ export const Overlay = styled.div<FormProps>`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-`;
+`
 
 export const Button = styled.button`
   padding: 8px 25px;
@@ -31,11 +31,10 @@ export const Button = styled.button`
   color: rgb(0, 0, 0);
   border: 1px solid #808080;
   border-radius: 4px;
-`;
-
+`
 
 export const Form = styled.form<FormProps>`
-  display: ${props => (props.show ? 'block' : 'none')};
+  display: ${(props) => (props.show ? 'block' : 'none')};
   position: absolute;
   background-color: #fff;
   width: 30%;
@@ -45,14 +44,14 @@ export const Form = styled.form<FormProps>`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-`;
+`
 
 export const Input = styled.input`
   margin: 10px 20px 10px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
-`;
+`
 
 export const Select = styled.select`
   width: 100%;
@@ -60,7 +59,7 @@ export const Select = styled.select`
   border: 1px solid #ccc;
   border-radius: 4px;
   margin: 10px 20px 10px 0;
-`;
+`
 
 export const Textarea = styled.textarea`
   width: 100%;
@@ -70,7 +69,7 @@ export const Textarea = styled.textarea`
   border-radius: 4px;
   margin-top: 6px;
   resize: vertical;
-`;
+`
 
 export const SubmitButton = styled.button`
   background-color: #28a745;
@@ -80,7 +79,7 @@ export const SubmitButton = styled.button`
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
-`;
+`
 
 export const CloseButton = styled.button`
   position: absolute;
@@ -92,4 +91,4 @@ export const CloseButton = styled.button`
   cursor: pointer;
   font-size: 18px;
   color: #333;
-`;
+`

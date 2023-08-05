@@ -1,23 +1,22 @@
-import styled from 'styled-components';
-
+import styled from 'styled-components'
 
 type FormProps = {
-    show: boolean;
-  }
+  show: boolean
+}
 
-  export const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
   padding: 20px;
-`;
+`
 
 export const ColumnContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-`;
+`
 
 export const EditFormOverlay = styled.div<FormProps>`
   position: fixed;
@@ -25,12 +24,12 @@ export const EditFormOverlay = styled.div<FormProps>`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  display: ${props => (props.show ? 'block' : 'none')};
-`;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: ${(props) => (props.show ? 'block' : 'none')};
+`
 
 export const Form = styled.form<FormProps>`
-  display: ${props => (props.show ? 'block' : 'none')};
+  display: ${(props) => (props.show ? 'block' : 'none')};
   position: absolute;
   background-color: #fff;
   width: 30%;
@@ -40,14 +39,14 @@ export const Form = styled.form<FormProps>`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-`;
+`
 
 export const Input = styled.input`
   margin: 10px 20px 10px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
-`;
+`
 
 export const Select = styled.select`
   width: 100%;
@@ -55,7 +54,7 @@ export const Select = styled.select`
   border: 1px solid #ccc;
   border-radius: 4px;
   margin: 10px 20px 10px 0;
-`;
+`
 
 export const Textarea = styled.textarea`
   width: 100%;
@@ -65,7 +64,7 @@ export const Textarea = styled.textarea`
   border-radius: 4px;
   margin-top: 6px;
   resize: vertical;
-`;
+`
 
 export const CloseButton = styled.button`
   position: absolute;
@@ -77,7 +76,7 @@ export const CloseButton = styled.button`
   cursor: pointer;
   font-size: 18px;
   color: #333;
-`;
+`
 
 export const SubmitButton = styled.button`
   background-color: #007bff;
@@ -86,4 +85,4 @@ export const SubmitButton = styled.button`
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-`;
+`

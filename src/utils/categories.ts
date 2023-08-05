@@ -1,1 +1,1 @@
-export const categories = ['Task', 'Random Thought', 'Idea'];
+export const categories = ['Task', 'Random Thought', 'Idea']
