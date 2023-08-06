@@ -25,6 +25,7 @@ const ArchivedNotesTable = () => {
         <Col>Category</Col>
         <Col>Content</Col>
         <Col>Dates</Col>
+        <Col></Col>
       </Thead>
       {archivedNotes.map((note) => (
         <TBody key={note.id}>
